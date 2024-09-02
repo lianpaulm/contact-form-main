@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'CustomFont';
-  src: url('./assets/fonts/Karla-VariableFont_wght.ttf') format('woff2');  font-weight: normal;
+  src: url('../assets/fonts/Karla-VariableFont_wght.ttf') format('woff2');  font-weight: normal;
   font-style: normal;
 }
 
@@ -70,27 +70,42 @@ label.consent::after {
   content: ""; 
 }
 
+
 input[type='text'], input[type='email'], textarea, .query-btn {
-  border: 1px solid var(--gray);
   border-radius: 5px;
   padding: .8rem 1rem;
   width: 100%;
   cursor: pointer;
 }
 
-input:focus, textarea:focus{
+.input-field,button, textarea {
+  font-size: 1rem;
+  font-family: 'CustomFont', sans-serif;
+}
+
+.input-field:focus{
   outline:1px solid var(--primary-color);
   border:1px solid var(--primary-color);
 }
 
-input:hover, textarea:hover{
-  border:1px solid var(--primary-color);
+.input-field {
+  border: 1px solid var(--gray);
 }
 
+.input-error:focus {
+  outline:1px solid var(--red);
+  border:1px solid var(--red);
+}
 
-input[type='text'], input[type='email'],button, textarea {
-  font-family: 'CustomFont', sans-serif;
-  font-size: 1rem;
+.input-error {
+  border: 1px solid  var(--red);
+}
+
+.field-error-text {
+  font-size: .8rem;
+  color: var(--red);
+  margin-top: .5rem;
+  margin-bottom: 0;
 }
 
 .query-btn {
@@ -102,7 +117,6 @@ input[type='text'], input[type='email'],button, textarea {
   line-height: 1.6;
 
 }
-
 
 textarea {
 resize: none;
@@ -128,6 +142,7 @@ height: 100px;
   background-color: hsl(168, 58%, 25%);
   transition: 255ms;
 }
+
 
 
 /* smaller device */
